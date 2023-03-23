@@ -28,8 +28,10 @@ $(OBJ_DIR)/%.o: src/%.c
 exe:$(BINARY)
 
 # Command to execute NEMU
-ARGS = 3
-RUN_EXEC := $(BINARY) $(ARGS)
+#ARGS = 3
+LAYER = 3
+MOD = 0
+RUN_EXEC := $(BINARY) $(LAYER) $(MOD)
 
 $(BINARY): $(OBJS)
 	@echo + [LD] $@
